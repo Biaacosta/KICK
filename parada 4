@@ -1,1 +1,64 @@
+programa {
+  função   inicio () {
+    opção inteira
+    inteiro x
+    inteiro y
 
+
+  fachada
+  {
+    
+
+  
+  escreva ( "\n\nInforme o primeiro valor: \n" )
+  leia (x)
+  escreva ( "Digite o segundo valor: \n" )
+  leia (y)
+
+
+
+  escreva ( "1.SOMAR \n" )
+  escreva ( "2.SUBTRAIR \n" )
+  escreva ( "3.MULTIPLICAR \n" )
+  escreva ( "4.DIVIDIR \n" )
+  escreva ( "5.SAIR\n" )
+
+  escreva ( "Informe a operação matemática desejada:" )
+  leia (opção)
+
+  
+
+
+
+      escolha (opção)
+      {
+       caso   1 :
+       escreva ( "A soma é: " + (x + y) )
+       parear
+
+       
+       caso   2 :
+       escreva ( "A subtração é: " + (x - y) )
+       parear
+
+       
+       caso   3 :
+       escreva ( "A multiplicação é: " + (x * y) )
+       parear
+
+       
+       caso   4 :
+       escreva ( " A divisão é: " + (x / y))
+       parear
+       
+       caso   5 :
+       escreva ( "Saindo..." )
+       parear
+
+       caso contrário:
+       escreva ( "opção não existe" )
+      }
+
+    } enquanto (opção <> 5 )
+}
+}
