@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+        overflow:hidden;
+        background-image: url(bolo.jpg);
+
+    }
+    .nav a{
+        float: left;
+        font-size: 16px;
+        color:white;
+        text-align:center;
+        padding:14px  16px;
+        text-decoration: none;
+    }
+    .dropdown{
+        float: left;
+        overflow: hidden;/*vai definir a cor que foi definida ao pai, 
+        isso impede que fiquemos sempre escrevendo a mesma cor várias vezes*/
+    }
+    .dropdown .dropbtn{
+        float: left;
+        font-size: 16px;
+        color:red;
+        text-align: center;
+        padding: 14px 16px;
+        background-color: inherit; /* vai definir a mesma cor que foi definida para o pai, p
+        ore´m vai facilitar o trabalaho de não reescrever várias vezes*/
+        margin:0;
+    }
+    .nav a:hover, .dropdown:hover .dropbtn{
+        background-color: coral;
+    }
+    .dropdown:hover .dropdown-menu{
+        display: block;/* um espaçamento emcima e embaixo*/
+    }
+    .dropdown-menu{
+        display: none;/*retira o eleemnto do layout*/
+        position: absolute;
+        background-color: white;/*configurando o fundo do nosso menu dropdown*/
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropdown-menu a{
+        float: none;
+        color:black;
+        padding: 12px 16px;
+        text-decoration:none;
+        display: block;
+        text-align: left;
+    }
+    button{
+        background-color: coral;
+    }
+
+    
+
+    @media  sreen and (max-width:600px)
+    {
+            .nav a.not {display: none;}
+            .nav.responsive .icon
+            {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+    }
+
+    @media screen and (max-width:600px){
+            .nav.responsive{position: relative;}
+            .nav.responsive .icon{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .nav.responsive a{
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#">
+            <i class="aba home"></i>
+            Home
+        </a>
+        <a href="#">
+            Noticias
+            <i class="aba sobre"></i>
+        </a>
+
+        <a href="#">
+            Contatos
+            <i class="aba contato"></i>
+        </a>
+
+        <div class="dropdown">
+            <button class="droptbn"> Encomendas<i class="button"></i></button>
+            <div class="dropdown-menu">
+                <a href="#">Doces</a>
+                <a href="#">Salgados</a>
+                <a href="#">Mousses</a>
+                <a href="#">Tortas</a>
+                <a href="#">...</a>
+            </div>
+        
+    </div>
+    
+</body>
+
+</html>
