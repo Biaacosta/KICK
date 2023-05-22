@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .voto{
+            background-color: lightcoral;
+            font-size: 20px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //4 opcoes de voto 
+        //opcao de nulo e branco 
+        //deve ser possivel votar novamente ou sair da votacao
+        //a quantidade de votos de cada candidato deve aparecer na tela
+
+        let voto = 3;
+        let maria = 0;
+        let branco = 0;
+        let dom = 0;
+        let kaique = 0;
+        let nulo = 0;
+        let joao = 0;
+
+        while(voto != 0){
+        voto = parseFloat(prompt("De acordo com os candidatos, coloque seu voto: \n Vote 19 para Maria \n Vote 23 para Domenich \n Vote 27 para Kaique \n Vote 31 para João \n Voto branco - 11 \n voto 22- nulo \n insira 10 para mostrar os votos de cada candidato\n Insira 0 para sair"))
+        
+        
+            switch(voto){
+                case 11:
+                alert("Você votou branco");
+                branco++;
+                break;
+
+                case 22: 
+                alert("Você votou nulo");
+                nulo++;
+                break;
+
+                case 19:
+                alert("Você votou na Maria");
+                maria++;
+                break;
+
+                case 23:
+                alert("Você votou no Domenich");
+                dom++
+                break;
+
+                case 27:
+                alert("Você votou no Kaique");
+                kaique++;
+                break;
+
+                case 31:
+                alert("Você votou João");
+                joao++;
+                break;
+
+                case 10:
+                alert('Maria teve:'+maria+' votos\n Domenich teve:'+dom+' votos\n Kaique teve:'+kaique+' votos\n João teve:'+joao+' votos\n Quantidade de votos nulo:'+nulo+' votos\n Quantidade de votos branco:'+branco+' votos');
+                
+                default:
+                break;
+            }
+               
+        }
+        alert("Você saiu")
+
+    </script>
+    
+</body>
+</html>
