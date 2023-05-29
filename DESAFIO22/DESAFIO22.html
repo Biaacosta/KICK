@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        div{
+            text-align: center;
+        }
+        body{
+            background-color: blueviolet;
+        }
+        button{
+            
+            height: 40px;
+            width: 100px;
+            background-color: brown;
+            font-size: 16px;
+            color:white;
+
+        }
+    </style>
+    <title>Quiz com Alert</title>
+  </head>
+  <body>
+    <div>
+    <h2>Escolha o quiz que você deseja para iniciar o jogo</h2><br><br><br><br>
+    <button onclick="exibirQuiz1()">Astronomia</button>
+    <button onclick="exibirQuiz2()">Saúde</button>
+    <button onclick="exibirQuiz3()">Animais</button>
+    </div>
+    <script>
+        let op = 10
+        let cont = 0
+        let pontuacao = 0
+        let resposta
+
+      function exibirQuiz1() {
+        
+                    resposta = prompt("Buracos negros não entram na classificação de Astros. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro")
+                    {
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta...")
+                    }
+                    resposta = prompt("Nebulosas são formadas por Poeira espacial,Plasma e Hidrogênio. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso")
+                    {
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta ...")
+                    }
+                    resposta = prompt("Júpiter tem 79 satélites. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta ...")
+                    }
+                    alert(`vc fez ${pontuacao} pontos`)
+                    pontuacao = 0
+                    
+                }
+            
+        
+
+
+                    function exibirQuiz2() {
+        
+                       
+                    resposta = prompt("Passar frio pode ocasionar em gripes e resfriados").toLowerCase()
+                    if(resposta == "falso")
+                    {
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta...")
+                    }
+                    resposta = prompt("Um recém- nascido tem mais ossos que um adulto").toLowerCase()
+                    if(resposta == "verdadeiro")
+                    {
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta...")
+                    }
+                    resposta = prompt("O maior órgão do corpo humano é a pele").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta...")
+                    }
+                    alert(`vc fez ${pontuacao} pontos`)
+                    pontuacao = 0
+                    
+                }
+            
+        
+
+      
+        
+                 
+
+      function exibirQuiz3() {
+        resposta = prompt("O campeão da lista dos maiores animais existentes é a baleia azul. Verdadeiro ou falso?").toLowerCase()
+                    if(resposta == "verdadeiro")
+                    {
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta...")
+                    }
+                    resposta = prompt("A Arara-Azul ainda não esta mais em risco de extinção. Verdadeiro ou falso?").toLowerCase()
+                    if(resposta == "falso")
+                    {
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta...")
+                    }
+                    resposta = prompt("O escorpião é um inseto.Verdadeiro ou falso?").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta...")
+                    }
+                    alert(`vc fez ${pontuacao} pontos`)
+                    pontuacao = 0
+    
+      }
+    
+
+        
+      
+    </script>
+  </body>
+</html>
