@@ -1,0 +1,79 @@
+body{
+  background-image:url(fundo.jpg);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #07517c;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+h2{
+  padding:30px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color:#9DB9F5;
+}
+.active {
+  background-color:#0D0D0D;
+}
+
+.container {
+  white-space: nowrap; 
+  padding-top: 50px;
+}
+
+.box {
+  display: inline-block;
+  width: 24%; 
+  box-sizing: border-box;
+  text-align: center; 
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: 10px;
+  background-color: #9DB9F5;
+}
+.conteudo{
+  display: inline-block;
+  width: 24%; 
+  box-sizing: border-box;
+  text-align: center; 
+  padding-top: 40px;
+  background-color:#9DB9F5;
+  margin-right: 10px;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
+}
+img{
+height: auto;
+width: 250px;
+}
+
+@media (max-width: 600px) {
+          .container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+          }
+
+          .box,
+          .conteudo {
+              width: 100%;
+              margin-right: 0;
+              margin-bottom: 10px;
+          }
+      }
