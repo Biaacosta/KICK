@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
+</head>
+<body class="cadastro">
+    <div class="container">
+        <h1>Faça seu cadastro para concorrer a vaga de emprego!</h1>
+        <form id="cadastro" onsubmit="return valida()" method="post">
+            <label for="">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <label for="">CPF:</label>
+            <input type="text" id="cpf" placeholder="Sem dígito verificador" maxlength="11">
+            <label for="">RG:</label>
+            <input type="text" id="rg" placeholder="Sem dígito verificador" maxlength="7">
+            <label for="">Email:</label>
+            <input type="text" id="mail" placeholder="Digite seu email">
+            <label for="">Grau de escolaridade:</label>
+            <select id="escolaridade">
+                <option>Ensino Fundamental Incompleto</option>
+                <option>Ensino Fundamental Completo</option>
+                <option>Ensino Médio Incompleto</option>
+                <option>Ensimo Médio Completo</option>
+                <option>Ensino Superior Incompleto</option>
+                <option>Ensino Superior Completo</option>
+            </select>
+            <h3>Selecione a opção que mais se encaixa atualmente para você</h3>
+            <input type="radio" id="desempregado" name="empregabilidade" value="Desempregado">
+            <label for="">Desempregado</label>
+            <input type="radio" id="empregado" name="empregabilidade" value="Empregado">
+            <label for="">Empregado</label>
+            <input type="radio" id="procurando" name="empregabilidade" value="Procurando">
+            <label for="">Procurando um emprego</label>
+            <input type="radio" id="emprego" name="empregabilidade" value="Emprego">
+            <label for="">Em um emprego insatisfatório</label>
+            <br><br>
+            <h3><label for="">Faça upload do seu currículo</label></h3>
+            <input type="file" id="upload" required>
+            <input type="submit" value="Salvar">
+
+
+        </form>
+    </div>
+    
+</body>
+</html>
