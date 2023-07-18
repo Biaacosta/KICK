@@ -1,0 +1,349 @@
+/*INTRODUÇÃO*/
+body{
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(109, 30, 30);
+}
+/*carrosel*/
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+/*final do carrossel*/
+  
+.desenvolvimento {
+  
+  background-color:#1C1C1C;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+.introducao {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.img-introducao{
+  width: 380px;
+  height:400px;
+}
+h1{
+  color: white;
+  font-size: 60px;
+}
+.texto1 {
+  margin-top: 20px;
+  color: white;
+  width: 50%;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  
+}
+
+/*inicio dos contatos*/
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contatos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000222;
+  width: 100%;
+}
+
+.div1{
+  background-image: url(contato1.jpg);
+  background-size: cover;
+}
+.div2{
+  background-image: url(contato2.jpg);
+  background-size: cover;
+}
+.div3{
+  background-image: url(contato3.jpg);
+  background-size: cover;
+}
+.div4{
+  background-image: url(contato4.jpg);
+  background-size: cover;
+}
+.div1,
+.div2,
+.div3,
+.div4 {
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+}
+
+
+.desc1,
+.desc2,
+.desc3,
+.desc4 {
+  width: 300px;
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
+  margin: 40px;
+  margin-top: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5) ;
+  border-radius: 10px;
+}
+
+
+
+
+.diferenca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dife {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(30, 70, 30);
+  width: 100%;
+}
+.texto2{
+  width: 600px;
+  height: 400px;
+  margin-top: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.5) ;
+  border-radius: 10px;
+  
+}
+
+.img-dife{
+  width: 600px;
+  height: 500px;
+  margin: 40px;
+  background-color: black;
+}
+.img-dife{
+  background-image: url(dife.jpg);
+  background-size: cover;
+  
+}
+.texto2{
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
+.duvidas-container{
+  width: 100%;
+  height: 700px;
+  background-color: #000222;
+  display: flex;
+}
+#myDiv {
+  width: 200px;
+  height: 50px;
+  background-color: #ccc;
+  transition: height 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#texto {
+  display: none;
+  background-color: #f2f2f2;
+  padding: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/*BARRA DE NAVEGACAO*/
+.barra-navegacao {
+  
+  width: 50%;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 25%;
+  background-color:rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border-radius: 10px;
+  
+  
+}
+.barra-navegacao-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.logo{
+   
+  height: 80px; 
+  width: 80px; 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+  }
+  
+  li a:hover {
+    background-color:#a19a9a71;
+  }
+  .link1{
+    color: red;
+  }
+  .inicio{
+    color:blue;
+  }
+  .sobre{
+    color:yellow;
+  }
+  .info{
+    color: green;
+  }
+
+  
+  
+
+  /*responsividade*/
+  @media screen and (max-width: 768px) {
+  .carousel-container {
+    height: 300px;
+  }
+
+  .img-introducao {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .texto1 {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4 {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+  }
+
+  .desc1,
+  .desc2,
+  .desc3,
+  .desc4 {
+    width: 90%;
+    font-size: 16px;
+    margin: 20px;
+  }
+
+  .texto2 {
+    width: 90%;
+    height: auto;
+  }
+
+  .img-dife {
+    width: 90%;
+    height: auto;
+    margin: 20px;
+  }
+
+  .barra-navegacao-container {
+    padding: 5px;
+  }
+
+  .barra-navegacao {
+    flex-direction: column;
+    height: auto;
+  }
+
+}

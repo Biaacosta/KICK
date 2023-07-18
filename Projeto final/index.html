@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+    
+</head>
+<body>
+    <div class="barra-navegacao-container">
+    <div class="barra-navegacao scrolled" class="barra-navegacao">
+        <ul>
+            <li class="link1"><a class="#active" href="#active">Inicio</a></li>
+            <li class="link2"><a href="#sobre">Sobre</a></li>
+            <li class="link3"><a href="#contatos">Contatos</a></li>
+            <li class="link4"><a href="#info">Informações</a></li>
+            
+          </ul>
+    </div>
+    </div>
+    
+    <!--inicio do carrosseel-->
+    <section id="active"></section>
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide">
+            <img src="carrossel1 (1).jpg" alt="Imagem 1">
+          </div>
+          <div class="slide">
+            <img src="carrossel2.png.jpg" alt="Imagem 2">
+          </div>
+          <div class="slide">
+            <img src="carrossel3.png.jpg" alt="Imagem 3">
+          </div>
+        </div>
+      
+        <a class="prev-btn" onclick="plusSlide(-1)">&#10094;</a>
+        <a class="next-btn" onclick="plusSlide(1)">&#10095;</a>
+
+      </div>
+      
+      
+
+   <!--final do carrosel-->
+   <div class="desenvolvimento">
+    <div class="introducao">
+      <section id="sobre"></section>
+        <strong><h1>Autismo em foco</h1></strong>
+      <img src="Design sem nome (3).jpg" class="img-introducao">
+      <div class="texto1"><p>O autismo, também conhecido como Transtorno do Espectro Autista (TEA),
+         é uma condição neurológica que afeta o desenvolvimento da comunicação, interação social e 
+         padrões de comportamento. É um transtorno complexo e variável, com diferentes níveis de 
+         gravidade e características específicas em cada indivíduo.</p>
+
+        <p>Uma das principais características do autismo é a dificuldade na comunicação verbal e não
+             verbal. Pessoas no espectro autista podem apresentar atrasos no desenvolvimento da fala 
+             ou ter dificuldade em expressar suas necessidades e emoções. Além disso, a interação
+              social pode ser um desafio, pois as pessoas com autismo podem ter dificuldade em
+               compreender e responder a interações sociais convencionais.</p></div>
+      </div>
+    </div>
+    <div class="container-2">
+      <section id="contatos"></section>
+      <h1>Contatos</h1>
+        <div class="contatos">
+          <div class="div1"></div>
+          <div class="div2"></div>
+        </div>
+      
+        <div class="contatos">
+          
+          <div class="desc1">Dr. Joana Silva é uma psicóloga altamente experiente
+             e dedicada, com uma abordagem terapêutica centrada no cliente. 
+             Ela tem uma paixão genuína pelo bem-estar mental e emocional de 
+             seus pacientes e busca proporcionar um ambiente acolhedor e 
+             seguro para que eles possam explorar suas questões.</div>
+          <div class="desc2">Dra. Ana Oliveira:
+            Dra. Ana Oliveira é uma psicóloga infantil altamente qualificada e apaixonada 
+            por ajudar crianças a enfrentar desafios emocionais e desenvolver habilidades 
+            sociais e emocionais saudáveis. Ela tem ampla experiência em trabalhar com 
+            crianças e está comprometida em fornecer o apoio necessário para seu desenvolvimento 
+            saudável. </div>
+        </div>
+      
+        <div class="contatos">
+          <div class="div3"></div>
+          <div class="div4"></div>
+        </div>
+      
+        <div class="contatos">
+          <div class="desc3">Dr. Pedro Santos é um psicólogo especializado em terapia familiar 
+            e de casal, com vasta experiência no campo. Ele acredita firmemente no poder das
+             relações interpessoais e na importância de um ambiente familiar saudável para o
+              bem-estar emocional de cada indivíduo. Ele trabalha em estreita colaboração com 
+              as famílias para ajudá-las a superar desafios e fortalecer seus vínculos emocionais. </div>
+          <div class="desc4">Dr. Tiago Martins:
+            Dr. Tiago Martins é um psicólogo experiente e comprometido em ajudar seus pacientes a alcançar 
+            o bem-estar emocional e mental. Com uma abordagem empática e acolhedora, ele cria um ambiente 
+            seguro onde os pacientes se sentem à vontade para explorar suas emoções e desafios pessoais. 
+            Ele oferece suporte individualizado, ajudando os pacientes a desenvolver habilidades e 
+            estratégias para lidar com as dificuldades e promover seu crescimento pessoal.</div>
+        </div>
+      </div>
+      
+
+      <div class="diferenca">
+        <section id="info"></section>
+        <div class="dife">
+          <div class="texto2"><h2>Diferença entre TEA e TDAH</h2><br><br>
+            O Transtorno do Espectro do Autismo (TEA) e o Transtorno de Déficit de Atenção
+             e Hiperatividade (TDAH) são duas condições neuropsiquiátricas distintas. O TEA afeta 
+             a comunicação, interação social e comportamento, com dificuldades na comunicação e 
+             padrões repetitivos de comportamento. O TDAH é caracterizado por déficit de atenção,
+              hiperatividade e impulsividade. Enquanto o TEA se concentra na interação social e 
+              comportamento, o TDAH está relacionado à atenção e controle impulsivo. O diagnóstico 
+              correto e apoio adequado são essenciais para ambas as condições. As intervenções
+               terapêuticas e educacionais podem variar para melhor atender às necessidades de
+                cada indivíduo.</div>
+          <div class="img-dife"></div>
+        </div>
+        </div>
+        
+
+        
+      
+
+  
+        
+                
+</body>
+<script>
+     let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlide(n){
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("ponto");
+    if(n > slides.length){
+        slideIndex = 1;
+    }
+    if(n < 1){
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+    for(i = 0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+//troca de cor do link 
+
+  window.addEventListener('scroll', function() {
+    var carrosselHeight = document.querySelector('.carrossel-container').offsetHeight;
+    var navbar = document.querySelector('.barra-navegacao');
+
+    if (window.pageYOffset > carrosselHeight) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+//carrossel
+
+
+showSlides(slideIndex);
+
+function plusSlide(n){
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    if(n > slides.length - 1){
+        slideIndex = 0;
+    }
+    if(n < 0){
+        slideIndex = slides.length - 1;
+    }
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+    for(i = 0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].className += " active";
+}
+
+//troca de cor do link 
+window.addEventListener('scroll', function() {
+    var carrosselHeight = document.querySelector('.carousel-container').offsetHeight;
+    var navbar = document.querySelector('.barra-navegacao');
+
+    if (window.pageYOffset > carrosselHeight) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+//carrossel
+const carousel = document.querySelector('.carousel');
+const slides = Array.from(carousel.querySelectorAll('.slide'));
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+prevBtn.addEventListener('click', function() {
+    plusSlide(-1);
+});
+
+nextBtn.addEventListener('click', function() {
+    plusSlide(1);
+});
+
+//perguntas sobre o autismo//
+function mostrarTexto() {
+  var textoDiv = document.getElementById("texto");
+  if (textoDiv.style.display === "none") {
+    textoDiv.style.display = "block";
+  } else {
+    textoDiv.style.display = "none";
+  }
+}
+
+</script>
+
+         
+    </script>
+</script>
+</html>
