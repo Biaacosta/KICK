@@ -1,0 +1,93 @@
+import pandas as pd
+df = pd.read_csv("BolsaFormacao_MatriculasValidas.csv")
+
+print(df.head())
+print(df.info())
+import matplotlib.pyplot as plt
+matriculas_uf = df.groupby('UF')['MATRICULAS'].sum()
+matriculas_por_estado = matriculas_uf.sort_values(ascending=False)
+
+plt.figure(figsize=(12, 6))
+matriculas_uf.plot(kind='bar', color='skyblue')
+plt.title('Número de Matrículas por Estado')
+plt.xlabel('Estado')
+plt.ylabel('Número de Matrículas')
+plt.xticks(rotation=45)
+plt.show()
+import pandas as pd
+import matplotlib.pyplot as plt
+
+matriculas_por_dependencia = df.groupby('DEPENDENCIAADMINISTRATIVA')['MATRICULAS'].sum()
+plt.figure(figsize=(10, 6))
+matriculas_por_dependencia.plot(kind='bar', color='lightgreen')
+plt.title('Número de Matrículas por Dependência Administrativa')
+plt.xlabel('Dependência Administrativa')
+plt.ylabel('Número de Matrículas')
+plt.xticks(rotation=45)
+plt.show()
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+instituicoes_por_estado = df.groupby('UF')['INSTITUICAO'].nunique()
+matriculas_por_estado = df.groupby('UF')['MATRICULAS'].sum()
+
+fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(12, 12))
+
+instituicoes_por_estado.plot(kind='bar', ax=axes[0], color='lightblue')
+axes[0].set_title('Número de Instituições de Ensino por Estado')
+axes[0].set_xlabel('Estado')
+axes[0].set_ylabel('Número de Instituições')
+
+matriculas_por_estado.plot(kind='bar', ax=axes[1], color='lightgreen')
+axes[1].set_title('Número de Matrículas por Estado')
+axes[1].set_xlabel('Estado')
+axes[1].set_ylabel('Número de Matrículas')
+
+plt.tight_layout()
+plt.show()
+
+
+import pandas as pd
+
+matriculas_por_ano = df.groupby('ANO')['MATRICULAS'].sum()
+
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 6))
+matriculas_por_ano.plot(kind='line', marker='o', color='skyblue')
+plt.title('Número de Matrículas por Ano')
+plt.xlabel('Ano')
+plt.ylabel('Número de Matrículas')
+plt.grid(True)
+plt.show()
+
+from google.colab import files
+arquivo = files.upload()
+
+!pip install PyPdf2
+
+import PyPDF2
+file = open('grafico1.pdf','rb')
+!pip install reportlab
+
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Image, Paragraph
+from reportlab.lib.styles import getSampleStyleSheet
+
+pdf_filename = "grafico1.pdf"
+document = SimpleDocTemplate(pdf_filename, pagesize=letter)
+elements = []
+image_path = "grafico1.png"
+image = Image(image_path, width=letter[0] * 0.7, height=letter[1] * 0.5)
+elements.append(image)
+
+text = "Esse gráfico nos mostra o número de matrículas por estado, contendo assim a informação de que a unidade federativa de MG, possui mais estudantes na ativa que os demais."
+paragraph = Paragraph(text)
+elements.append(paragraph)
+
+document.build(elements)
+print(f"Página nova: {pdf_filename}")
+
+from google.colab import files
+arquivo = files.upload()
